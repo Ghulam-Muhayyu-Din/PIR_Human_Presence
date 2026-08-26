@@ -1,0 +1,37 @@
+metric,value,notes
+dataset_path,D:\Research\writing Article\Crosslink\PIR_Human_Presence\data\pirvision_office_dataset.csv,The single canonical dataset used by the entire pipeline.
+n_rows,7651,
+n_columns,59,
+column_names,Date | Time | Label | Temperature_F | PIR_1 | PIR_2 | PIR_3 | PIR_4 | PIR_5 | PIR_6 | PIR_7 | PIR_8 | PIR_9 | PIR_10 | PIR_11 | PIR_12 | PIR_13 | PIR_14 | PIR_15 | PIR_16 | PIR_17 | PIR_18 | PIR_19 | PIR_20 | PIR_21 | PIR_22 | PIR_23 | PIR_24 | PIR_25 | PIR_26 | PIR_27 | PIR_28 | PIR_29 | PIR_30 | PIR_31 | PIR_32 | PIR_33 | PIR_34 | PIR_35 | PIR_36 | PIR_37 | PIR_38 | PIR_39 | PIR_40 | PIR_41 | PIR_42 | PIR_43 | PIR_44 | PIR_45 | PIR_46 | PIR_47 | PIR_48 | PIR_49 | PIR_50 | PIR_51 | PIR_52 | PIR_53 | PIR_54 | PIR_55,
+dtypes,Date:str | Time:str | Label:int64 | Temperature_F:int64 | PIR_1:int64 | PIR_2:int64 | PIR_3:int64 | PIR_4:int64 | PIR_5:int64 | PIR_6:int64 | PIR_7:int64 | PIR_8:int64 | PIR_9:int64 | PIR_10:int64 | PIR_11:int64 | PIR_12:int64 | PIR_13:int64 | PIR_14:int64 | PIR_15:int64 | PIR_16:int64 | PIR_17:int64 | PIR_18:int64 | PIR_19:int64 | PIR_20:int64 | PIR_21:int64 | PIR_22:int64 | PIR_23:int64 | PIR_24:int64 | PIR_25:int64 | PIR_26:int64 | PIR_27:int64 | PIR_28:int64 | PIR_29:int64 | PIR_30:int64 | PIR_31:int64 | PIR_32:int64 | PIR_33:int64 | PIR_34:int64 | PIR_35:int64 | PIR_36:int64 | PIR_37:int64 | PIR_38:int64 | PIR_39:int64 | PIR_40:int64 | PIR_41:int64 | PIR_42:int64 | PIR_43:int64 | PIR_44:int64 | PIR_45:int64 | PIR_46:int64 | PIR_47:int64 | PIR_48:int64 | PIR_49:int64 | PIR_50:int64 | PIR_51:int64 | PIR_52:int64 | PIR_53:int64 | PIR_54:int64 | PIR_55:int64,
+required_columns_present,True,"Checked for ['Date', 'Time', 'Label', 'Temperature_F']. Missing: none."
+target_values_match_expected,True,"Expected [0, 1, 3], found [0, 1, 3]."
+total_missing_values,0,
+duplicate_rows_within_file,0,
+identifier_column_candidates,NONE,Programmatically checked for any column that is both integer-typed and 100% unique-valued (a plausible row-ID). Result: no explicit identifier/row-ID column exists in the raw data.
+unique_target_values,"0,1,3",
+class_count_label_0,6247,Vacancy
+class_count_label_1,833,Stationary human presence
+class_count_label_3,571,Other activity/motion
+class_imbalance_ratio_majority_to_minority,10.94,Ratio of largest class count to smallest class count -> confirms imbalance.
+n_pir_sensor_columns_detected,55,Detected via regex PIR_\d+: PIR_1 ... PIR_55
+PIR_global_min,2602,
+PIR_global_max,111602625,
+Temperature_F_min,0,
+Temperature_F_max,89,
+Temperature_F_zero_value_rows,571,"Temperature==0 is not physically plausible for an indoor office in deg F and is treated as a probable sensor-dropout / missing-value sentinel. DECISION: these rows are NOT silently imputed (to avoid leaking distributional information from the full dataset into any train fold); a boolean flag column 'Temperature_F_is_zero_flag' is added in preprocessing so downstream models can (optionally) treat it as informative missingness, and the raw value is otherwise left untouched."
+Temperature_F_zero_value_pct,7.463,
+date_min,2024-08-08,
+date_max,2024-10-08,
+time_min,00:00:02,
+time_max,23:59:46,
+timestamp_min,2024-08-08 19:19:56,
+timestamp_max,2024-10-08 04:35:21,
+median_sampling_gap_seconds,16.0,
+mean_sampling_gap_seconds,682.003,
+min_sampling_gap_seconds,4.0,
+max_sampling_gap_seconds,2592016.0,
+pct_gaps_over_60s,0.026,Fraction of consecutive-observation gaps exceeding 60 seconds -> evidence sampling is NOT perfectly evenly spaced (confirms task note).
+n_unique_gap_values,20,More than 1 unique gap value confirms non-uniform sampling interval.
+potential_leakage_variables,"Date,Time","Raw Date/Time strings are exact timestamps; used only to build temporal groups for StratifiedGroupKFold and for the temporal stress test, and are EXCLUDED from the model feature matrix to prevent the model from memorizing timestamps."
+potential_identifier_variables,NONE,No column is both unique-valued and an unambiguous row identifier; row order in the CSV is the only implicit identifier and is not used as a feature.

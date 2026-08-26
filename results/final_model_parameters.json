@@ -1,0 +1,72 @@
+{
+  "RandomForest": {
+    "best_config_id": 0,
+    "best_params": "{'n_estimators': 300, 'max_depth': None, 'class_weight': None}",
+    "mean_macro_f1": 0.9196844116103241,
+    "mean_accuracy": 0.9748840826665426,
+    "mean_mcc": 0.9199385191343566
+  },
+  "ExtraTrees": {
+    "best_config_id": 1,
+    "best_params": "{'n_estimators': 300, 'max_depth': None, 'class_weight': 'balanced'}",
+    "mean_macro_f1": 0.918889823252267,
+    "mean_accuracy": 0.9751378019691896,
+    "mean_mcc": 0.9211367796048211
+  },
+  "CatBoost": {
+    "best_config_id": 0,
+    "best_params": "{'iterations': 300, 'depth': 6, 'learning_rate': 0.1, 'auto_class_weights': None}",
+    "mean_macro_f1": 0.9162315719512701,
+    "mean_accuracy": 0.9744784633411155,
+    "mean_mcc": 0.9191052054893838
+  },
+  "HistGradientBoosting": {
+    "best_config_id": 1,
+    "best_params": "{'max_iter': 200, 'max_depth': None, 'class_weight': 'balanced'}",
+    "mean_macro_f1": 0.9144951322746506,
+    "mean_accuracy": 0.9734221620172644,
+    "mean_mcc": 0.9158054057045544
+  },
+  "XGBoost": {
+    "best_config_id": 0,
+    "best_params": "{'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.1}",
+    "mean_macro_f1": 0.9117962673359375,
+    "mean_accuracy": 0.9726504949224857,
+    "mean_mcc": 0.9131534707408481
+  },
+  "SVM": {
+    "best_config_id": 0,
+    "best_params": "{'C': 1.0, 'kernel': 'rbf', 'gamma': 'scale', 'class_weight': None}",
+    "mean_macro_f1": 0.908727695427622,
+    "mean_accuracy": 0.972920224595178,
+    "mean_mcc": 0.9141598857413907
+  },
+  "MLP": {
+    "best_config_id": 0,
+    "best_params": "{'hidden_layer_sizes': (64, 32), 'alpha': 0.0001}",
+    "mean_macro_f1": 0.9037576490331336,
+    "mean_accuracy": 0.9698288987383954,
+    "mean_mcc": 0.9038930381287467
+  },
+  "KNN": {
+    "best_config_id": 0,
+    "best_params": "{'n_neighbors': 5, 'weights': 'distance'}",
+    "mean_macro_f1": 0.8891675822255658,
+    "mean_accuracy": 0.9666755395136308,
+    "mean_mcc": 0.8949603102741728
+  },
+  "DecisionTree": {
+    "best_config_id": 2,
+    "best_params": "{'max_depth': 12, 'class_weight': None}",
+    "mean_macro_f1": 0.86214975441083,
+    "mean_accuracy": 0.9555651263870077,
+    "mean_mcc": 0.8596656678147927
+  },
+  "LogisticRegression": {
+    "best_config_id": 2,
+    "best_params": "{'C': 0.1, 'class_weight': None}",
+    "mean_macro_f1": 0.8185649656309169,
+    "mean_accuracy": 0.9450322464796008,
+    "mean_mcc": 0.8210053724902325
+  }
+}

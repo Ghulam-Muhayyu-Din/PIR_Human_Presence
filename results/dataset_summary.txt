@@ -1,0 +1,50 @@
+==============================================================================
+PIR HUMAN PRESENCE DETECTION -- DATASET AUDIT SUMMARY
+==============================================================================
+
+Dataset file            : D:\Research\writing Article\Crosslink\PIR_Human_Presence\data\pirvision_office_dataset.csv
+Rows x Columns          : 7651 x 59
+Columns                 : Date, Time, Label, Temperature_F, PIR_1, PIR_2, PIR_3, PIR_4, PIR_5, PIR_6, PIR_7, PIR_8, PIR_9, PIR_10, PIR_11, PIR_12, PIR_13, PIR_14, PIR_15, PIR_16, PIR_17, PIR_18, PIR_19, PIR_20, PIR_21, PIR_22, PIR_23, PIR_24, PIR_25, PIR_26, PIR_27, PIR_28, PIR_29, PIR_30, PIR_31, PIR_32, PIR_33, PIR_34, PIR_35, PIR_36, PIR_37, PIR_38, PIR_39, PIR_40, PIR_41, PIR_42, PIR_43, PIR_44, PIR_45, PIR_46, PIR_47, PIR_48, PIR_49, PIR_50, PIR_51, PIR_52, PIR_53, PIR_54, PIR_55
+Target values match expected {0,1,3}: True (found [0, 1, 3])
+
+MISSING VALUES / DUPLICATE ROWS
+------------------------------------------------------------------------------
+  Total missing values (NaN)         : 0
+  Duplicate rows within the file      : 0
+  Identifier/row-ID column present?   : False (none found)
+
+CLASS DISTRIBUTION (target = Label; values are 0, 1, 3 -- NOT 0,1,2)
+------------------------------------------------------------------------------
+  Label=0 (Vacancy                     ):  6247 rows (81.65%)
+  Label=1 (Stationary human presence   ):   833 rows (10.89%)
+  Label=3 (Other activity/motion       ):   571 rows ( 7.46%)
+  Imbalance ratio (majority/minority) : 10.94
+
+FEATURES
+------------------------------------------------------------------------------
+  PIR sensor columns detected (regex PIR_\d+) : 55
+  PIR value range                              : [2602, 111602625]
+  Temperature_F range                          : [0, 89]
+  Temperature_F == 0 rows (data-quality flag)  : 571 (7.46%)
+    -> Treated as probable sensor dropout / missing-value sentinel, NOT
+       physically plausible indoor temperature. Not silently imputed; flagged
+       via a boolean indicator feature instead (see preprocessing.py).
+
+TEMPORAL COVERAGE / SAMPLING
+------------------------------------------------------------------------------
+  Date range   : 2024-08-08 to 2024-10-08
+  Time range   : 00:00:02 to 23:59:46
+  Median gap between consecutive observations : 16.0 s
+  Mean gap                                     : 682.0 s
+  Min / Max gap                                : 4.0 s / 2592016.0 s
+  % of gaps > 60s (non-uniform sampling evidence): 0.03%
+  -> Observations are confirmed NOT perfectly evenly spaced.
+
+LEAKAGE / IDENTIFIER RISK VARIABLES
+------------------------------------------------------------------------------
+  Date, Time: exact timestamps -- used only to build temporal groups for
+  StratifiedGroupKFold and the temporal stress test; excluded from the
+  feature matrix used to fit models.
+  No explicit row-ID / identifier column exists in the raw data.
+
+==============================================================================

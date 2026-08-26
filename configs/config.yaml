@@ -1,0 +1,29 @@
+seed: 42
+data:
+  canonical_csv: "data/pirvision_office_dataset.csv"
+  primary_feature_mode: "pir_only"
+  sensitivity_feature_mode: "pir_plus_temperature"
+target:
+  column: "Label"
+  original_values: [0, 1, 3]
+  encoded_values: [0, 1, 2]
+  label_map:
+    "0": {encoded: 0, meaning: "Vacancy"}
+    "1": {encoded: 1, meaning: "Stationary human presence"}
+    "3": {encoded: 2, meaning: "Other activity and motion"}
+cv:
+  n_splits: 5
+  strategy: "StratifiedGroupKFold"
+  temporal_group_window_seconds: 300
+  temporal_group_note: "Consecutive observations are grouped into 300 second windows per date. StratifiedGroupKFold uses these temporal groups to reduce leakage between adjacent observations."
+ablation:
+  pir_subset_sizes: [5, 10, 20, 30, 40, 55]
+paths:
+  results_dir: "results"
+  figures_dir: "figures"
+  models_dir: "models"
+  logs_dir: "logs"
+figures:
+  dpi: 600
+  formats: ["png", "pdf", "svg"]
+  palette: "colorblind"

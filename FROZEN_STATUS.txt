@@ -1,0 +1,13 @@
+FROZEN EXPERIMENTAL PACKAGE
+
+Primary input: 55 PIR sensors only
+Primary selection metric: Macro F1
+Evaluation: five fold StratifiedGroupKFold with 300 second temporal groups
+Selected model: RandomForest
+Cross validation Macro F1: 0.9196844116
+Cross validation accuracy: 0.9748840827
+OOF MCC: 0.920001
+
+The final figure refinement pass regenerated figures from frozen CSV results and the canonical dataset only. No model training, hyperparameter search, feature selection, or experimental metric generation was performed during figure refinement.
+
+Figure 10 uses the exact final 15 percent chronological holdout window. The holdout contains the final 115 rows of 2024 09 08 plus all 1033 rows of 2024 10 08. All 1148 holdout rows belong to the vacancy class, so this is treated as temporal stress analysis rather than a valid three class chronological benchmark.

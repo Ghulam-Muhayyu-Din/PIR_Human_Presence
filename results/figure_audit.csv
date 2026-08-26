@@ -1,0 +1,11 @@
+figure_name,file_path,status,width,height,dpi,notes
+figure_01_workflow,D:\Research\writing Article\Crosslink\PIR_Human_Presence\figures\figure_01_workflow.png,OK,6600,3840,599.9988,OK
+figure_02_class_distribution,D:\Research\writing Article\Crosslink\PIR_Human_Presence\figures\figure_02_class_distribution.png,OK,4421,3405,599.9988,OK
+figure_03_model_comparison,D:\Research\writing Article\Crosslink\PIR_Human_Presence\figures\figure_03_model_comparison.png,OK,5199,3645,599.9988,OK
+figure_04_confusion_matrix,D:\Research\writing Article\Crosslink\PIR_Human_Presence\figures\figure_04_confusion_matrix.png,OK,3998,3398,599.9988,OK
+figure_05_shap_feature_importance,D:\Research\writing Article\Crosslink\PIR_Human_Presence\figures\figure_05_shap_feature_importance.png,OK,5109,4149,599.9988,OK
+figure_06_pir_sensor_reduction,D:\Research\writing Article\Crosslink\PIR_Human_Presence\figures\figure_06_pir_sensor_reduction.png,OK,4877,3406,599.9988,OK
+figure_07_performance_vs_cost,D:\Research\writing Article\Crosslink\PIR_Human_Presence\figures\figure_07_performance_vs_cost.png,OK,5178,3623,599.9988,OK
+figure_08_correlation_heatmap,D:\Research\writing Article\Crosslink\PIR_Human_Presence\figures\figure_08_correlation_heatmap.png,OK,5131,4653,599.9988,OK
+figure_09_per_class_performance,D:\Research\writing Article\Crosslink\PIR_Human_Presence\figures\figure_09_per_class_performance.png,OK,4720,3208,599.9988,OK
+figure_10_temporal_class_distribution,D:\Research\writing Article\Crosslink\PIR_Human_Presence\figures\figure_10_temporal_class_distribution.png,OK,5420,3466,599.9988,OK

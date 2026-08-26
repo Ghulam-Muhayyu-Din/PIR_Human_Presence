@@ -1,0 +1,7 @@
+best_model,best_hyperparameters,n_oof_rows,overall_mcc,class_or_average,precision,recall,f1-score,support
+RandomForest,"{'n_estimators': 300, 'max_depth': None, 'class_weight': None}",7651,0.920001,0 (Vacancy),0.992349378386994,0.9966383864254842,0.9944892580464819,6247.0
+RandomForest,"{'n_estimators': 300, 'max_depth': None, 'class_weight': None}",7651,0.920001,1 (Stationary human presence),0.8888888888888888,0.9123649459783914,0.9004739336492891,833.0
+RandomForest,"{'n_estimators': 300, 'max_depth': None, 'class_weight': None}",7651,0.920001,3 (Other activity/motion),0.9061302681992337,0.8283712784588442,0.8655077767612077,571.0
+RandomForest,"{'n_estimators': 300, 'max_depth': None, 'class_weight': None}",7651,0.920001,accuracy,0.9749052411449484,0.9749052411449484,0.9749052411449484,0.9749052411449484
+RandomForest,"{'n_estimators': 300, 'max_depth': None, 'class_weight': None}",7651,0.920001,macro avg,0.9291228451583722,0.9124582036209065,0.9201569894856596,7651.0
+RandomForest,"{'n_estimators': 300, 'max_depth': None, 'class_weight': None}",7651,0.920001,weighted avg,0.9746505547470602,0.9749052411449484,0.9746273849531931,7651.0

@@ -1,0 +1,14 @@
+BEST MODEL (by primary CV strategy, StratifiedGroupKFold, empirically selected on Macro F1): ExtraTrees
+Best hyperparameters: {'n_estimators': 300, 'max_depth': None, 'class_weight': None}
+Out-of-fold (OOF) predictions across all 5 folds, 7651 rows.
+Overall MCC = 0.9813
+
+                               precision    recall  f1-score   support
+
+                  0 (Vacancy)     0.9957    0.9971    0.9964      6247
+1 (Stationary human presence)     0.9782    0.9676    0.9728       833
+    3 (Other activity/motion)     1.0000    1.0000    1.0000       571
+
+                     accuracy                         0.9941      7651
+                    macro avg     0.9913    0.9882    0.9897      7651
+                 weighted avg     0.9941    0.9941    0.9941      7651

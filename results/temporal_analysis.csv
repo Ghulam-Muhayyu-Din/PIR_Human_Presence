@@ -1,0 +1,11 @@
+section,date,n_rows,count_label_0_vacancy,count_label_1_stationary,count_label_3_motion,is_in_chronological_holdout,metric,value
+per_date_class_distribution,2024-08-08,1086.0,967.0,9.0,110.0,False,,
+per_date_class_distribution,2024-09-08,5532.0,4247.0,824.0,461.0,True,,
+per_date_class_distribution,2024-10-08,1033.0,1033.0,0.0,0.0,True,,
+chronological_holdout_evaluation,,,,,,,holdout_fraction,0.15
+chronological_holdout_evaluation,,,,,,,holdout_n_rows,1148
+chronological_holdout_evaluation,,,,,,,holdout_dates,2024-09-08;2024-10-08
+chronological_holdout_evaluation,,,,,,,holdout_classes_present,0
+chronological_holdout_evaluation,,,,,,,is_valid_multiclass_holdout,False
+chronological_holdout_evaluation,,,,,,,holdout_accuracy,1.0
+chronological_holdout_evaluation,,,,,,,holdout_mcc,0.0
